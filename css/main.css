@@ -1,0 +1,94 @@
+html,body{
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+
+.head{
+    height:120px;
+    width:100%;
+    margin:0;
+    padding:0;
+    background-color: #e6e6e6;
+}
+
+.content{
+    height:calc(100% - 120px);
+    width:100%;
+    margin:0;
+    padding:0;
+    margin-top:120px;
+    position:relative;
+}
+
+.content-manager{
+    width:408px;
+    height:100%;
+    position:absolute;
+    z-index: auto;
+}
+
+.content-map {
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index:0;
+}
+
+#map{
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+
+#footerDesktop{
+    position:relative;
+    height:160px;
+    padding-top:10px;
+}
+
+.carousel{
+    position:absolute;
+    bottom:0;
+    left:37px;
+    right:36px;
+    height:150px;
+}
+.carouselWrapper {
+    position: absolute;
+    z-index: 1;
+    top: 12px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 135px;
+    overflow:hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
