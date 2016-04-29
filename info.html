@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>详细信息</title>
+    <script type="text/javascript" src="asset/js/lib/jquery-1.7.2.js"></script>
+    <style>
+        #show-content{
+            font-family: Roboto, Arial, sans-serif;
+        }
+        #show-info {
+
+        }
+        #show-image{
+
+        }
+        #info-image{
+            width:408px;
+            height:250px;
+        }
+       #show-title{
+           height:50px;
+           width:408px;
+           background-color:blue;
+           align-content: center;
+       }
+       #title-info{
+           color:white;
+           line-height: 2.5;
+           font-size:20px;
+           text-align:center;
+           vertical-align:middle;
+       }
+        #show-info ul {
+            width: 400px;
+            height: 100%;
+            list-style: none;
+            text-align: center;
+        }
+
+        #show-info li {
+            /*border-left: 1px solid #ccc;*/
+            /*border-top: 1px solid #ccc;*/
+            float: left;
+            width: 150px;
+            height: 33px;
+            text-align: left;
+            line-height: 33px
+        }
+
+        #show-info .info-type li {
+            width: 80px;
+            text-align:right;
+        }
+        .info-prcode{
+            width: 300px;
+        }
+
+        .info-bottom {
+            border-bottom: 1px solid #ccc;;
+        }
+
+        .info-item {
+            border-right: 1px solid #ccc;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            content();
+        });
+        function content() {
+            var order = getCookie("order");
+            var myOrder = 1;
+            var mode=0;
+            if (order) {
+                myOrder = parseInt(order);
+                mode=myOrder % 2;
+                if (mode=== 0) {
+                    getContent("company",mode);
+                } else {
+                    getContent("build",mode);
+                }
+                setCookie("order", myOrder++, 10);
+            } else {
+                getContent("build",mode);
+            }
+            setCookie("order", myOrder++, 10);
+        }
+        function setCookie(name, value, expiredays) {
+            var lastCookieVal = document.cookie;
+            var cookieVal = "";
+            var exdate = new Date();
+            exdate.setDate(exdate.getDate() + expiredays);
+            //  if (lastCookieVal.indexOf(name)===-1) {
+            cookieVal = name + "=" + escape(value) + ((expiredays == null) ? "" : ";expires=" + exdate.toGMTString());
+            //  }
+
+            document.cookie = cookieVal;
+        }
+        function getCookie(name) {
+            var start = -1;
+            var end = 0;
+            if (document.cookie.length > 0) {
+                start = document.cookie.indexOf(name + "=");
+                if (start != -1) {
+                    start = start + name.length + 1;
+                    end = document.cookie.indexOf(";");
+                    if (end == -1) end = document.cookie.length;
+
+                    return unescape(document.cookie.substring(start, end));
+
+                }
+            }
+            return "";
+        }
+
+        function getCompanyInfo(type) {
+            var companyInfo = {
+                "title":"吉林市汇恒电子科技有限公司",
+                "image":'asset/images/company0.jpg',
+                '统一社会信用代码': '91110108569454891U',
+                "组织机构代码": "569454891",
+                "注册号": "110108013631762",
+                "经营状态": '开业',
+                "公司类型": '有限责任公司',
+                "成立日期": "2001-05-03",
+                "法人代表": '李明',
+                "营业期限": '--',
+                "注册资本": '1000万人民币',
+                "发照日期": '-',
+                "登记机关": '海淀分局',
+                "企业地址": '',
+                "经营范围": '技术开发',
+                'prcode':''
+
+            }
+            return companyInfo;
+        }
+
+        function getBuildInfo(type) {
+            var buildInfo = {
+                "title":"八一大厦",
+                "image":'asset/images/build'+type+'.jpg',
+                "建成时间": "2000-01",
+                "建筑类型": '商用',
+                "建筑年限": '40',
+                "建设单位":"吉化一建",
+                "建筑面积(㎡)":"10391.14"
+            };
+            return buildInfo;
+        }
+
+        function getContent(type,mode) {
+            var data = null;
+            switch (type) {
+                case "build":
+                    data = getBuildInfo(mode);
+                    break;
+                case "company":
+                    data = getCompanyInfo(mode);
+                    break;
+                default:
+                    data = getBuildInfo(mode);
+                    break;
+            }
+                var $info = $("#show-info");
+                $info.empty();
+                var $ul = $("<ul></ul>").appendTo($info);
+                for (var d in data) {
+                    if (data.hasOwnProperty(d)) {
+                        switch (d){
+                            case "image":
+                                $("#info-image").attr("src",data[d]);
+                                break;
+                            case "title":
+                                $("#title-info").text(data[d]);
+                                break;
+                            case 'prcode':
+                                var $Li = $("<li></li>").addClass("info-prcode");
+                                $ul.append($Li);
+                                break;
+                            default:
+                                var $keyLi = $("<li></li>").addClass("info-type").text(d);
+                                var $valLi = $("<li></li>").text(data[d])
+                                $ul.append($keyLi).append($valLi);
+                                break;
+                        }
+                    }
+                }
+        };
+    </script>
+</head>
+<body>
+<div id="show-content">
+<div id="show-image">
+    <img id="info-image" scr="" class="info-image"/>
+</div>
+<div id="show-title">
+    <div id="title-info"></div>
+</div>
+<div id="show-info"></div>
+</div>
+</body>
+</html>

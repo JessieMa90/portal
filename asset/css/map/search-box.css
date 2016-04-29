@@ -1,0 +1,355 @@
+#searchul li {
+    cursor: pointer;
+}
+
+#searchul li:hover {
+    background-color: rgb(204, 204, 204);
+}
+
+.left-panel {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.right-panel {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+#searchbox {
+    border-radius: 2px;
+    width: 425px;
+    position: relative;
+    z-index: 5;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+#searchbox #searchbox-container {
+    position: relative;
+    z-index: 2;
+    pointer-events: auto;
+    width: 328px;
+    float: left;
+    box-sizing: border-box;
+    box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.15);
+}
+
+#sole-searchbox-content {
+    position: relative;
+}
+
+.searchbox-content {
+    width: 328px;
+    border-radius: 2px 0 0 2px;
+    background: rgb(255, 255, 255);
+}
+
+#sole-searchbox-content #sole-input {
+    box-sizing: border-box;
+    border: 0;
+    padding: 9px 0;
+    border-left: 10px solid rgba(0, 0, 0, 0);
+    border-right: 27px solid rgba(0, 0, 0, 0);
+    line-height: 20px;
+    font-size: 16px;
+    height: 38px;
+    color: rgb(51, 51, 51);
+    position: relative;
+    border-radius: 2px 0 0 2px;
+}
+
+.searchbox-content .searchbox-content-common {
+    box-sizing: border-box;
+    float: left;
+    width: 329px;
+    height: 38px;
+}
+
+#sole-searchbox-content .input-clear {
+    right: 39px;
+}
+
+.searchbox-content .input-clear {
+    cursor: pointer;
+    position: absolute;
+    width: 27px;
+    height: 38px;
+    top: 0;
+    /*background: url('') no-repeat 0 -114px rgb(255, 255, 255);*/
+    display: none;
+}
+
+#add-button {
+    pointer-events: auto;
+    color: #FFF;
+    background: rgb(51, 133, 255);
+    width: 80px;
+    height: 38px;
+    float: left;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 0 2px 2px 0;
+    box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.15);
+}
+
+input, button, select, textarea {
+    outline: 0;
+    font-family: inherit;
+}
+
+#cards-level1 {
+    z-index: 1;
+}
+
+.cardlist {
+    width: 368px;
+    position: relative;
+    z-index: 0;
+}
+
+.wrap {
+    font-family: Arial, Helvetica, "Microsoft YaHei", sans-serif;
+}
+
+.wrap {
+    top: 58px;
+    left: 20px;
+    z-index: 1000;
+    width: 300px;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    border-top: 1px solid rgb(228, 230, 231);
+    box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.15);
+    border-radius: 0 0 2px 2px;
+}
+
+.scroll {
+    width: 230px;
+    height: 346px;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+.wrap .item a {
+    display: block;
+    height: 35px;
+    line-height: 35px;
+    padding-right: 10px;
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.wrap .item i.history {
+    /*background: url() no-repeat 12px 2px;*/
+}
+
+.wrap .item i {
+    padding-left: 39px;
+    font-style: normal;
+    color: rgb(102, 102, 102);
+    position: relative;
+    z-index: 1;
+    padding-top: 1px;
+}
+
+.bigbutton {
+    width: 80px;
+    height: 38px;
+    pointer-events: auto;
+    color: #FFF;
+    background: rgb(51, 133, 255);
+    float: left;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.15);
+}
+
+.button {
+    width: 60px;
+    height: 28px;
+    color: #FFF;
+    background: rgb(51, 133, 255);
+    float: left;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.15);
+}
+
+.hide {
+    display: none;
+}
+
+.layer {
+    display: none;
+    top: 68px;
+    right: 20px;
+    z-index: 1000;
+    width: 229px;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    border-top: 1px solid rgb(228, 230, 231);
+    box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.15);
+    border-radius: 2px 2px 2px 2px;
+}
+
+.close {
+    position: absolute;
+    right: 5px;
+    cursor: pointer;
+}
+
+.hidDiv {
+    z-index: 1004;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    left: 382px;
+}
+
+.showDiv {
+    z-index: 1004;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    left: 1px;
+}
+
+.mapinfo_but_con {
+    border-bottom: #D4D4D4 1px solid;
+    border-left: 0px;
+    line-height: 56px;
+    background-color: #fff;
+    width: 14px;
+    height: 56px;
+    border-top: #D4D4D4 1px solid;
+    cursor: pointer;
+    border-right: #D4D4D4 1px solid;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+}
+
+.mapinfo_but_span_hid {
+    /*    background-image: url("");*/
+    background-position: -109px -167px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    width: 5px;
+    height: 9px;
+    margin-left: 3px;
+    overflow: hidden;
+}
+
+.mapinfo_but_span_show {
+    /*    background-image: url("");*/
+    background-position: -139px -167px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    width: 5px;
+    height: 9px;
+    margin-left: 3px;
+    overflow: hidden;
+}
+
+#sideWrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 56px;
+    background-color: #252525;
+}
+
+#sideContent {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 56px;
+    width: 326px;
+    background-color: #fff;
+}
+
+.nav__bg-slider {
+    width: 56px;
+    height: 60px;
+    position: absolute;
+    z-index: 1;
+    background-color: #3385FF;
+    display: none;
+}
+
+.nav-list {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    text-align: center;
+    overflow: hidden;
+    display: block;
+    cursor: pointer;
+}
+
+.nav-list a {
+    display: inline-block;
+    text-align: center;
+    width: 56px;
+    height: 60px;
+    text-decoration: none;
+    zoom: 1;
+}
+
+.nav-list em {
+    display: block;
+    width: 17px;
+    height: 18px;
+    margin: 12px auto 5px;
+    border: none;
+}
+
+.nav-list span {
+    display: block;
+    font-size: 12px;
+    color: #999;
+    zoom: 1;
+}
+
+.nav-search-item em {
+    /*  background-image: url("");*/
+    background-position: -81px -167px;
+    background-repeat: no-repeat;
+}
+
+.route-item em {
+    /*    background-image: url();*/
+    background-position: -54px -167px;
+    background-repeat: no-repeat;
+}
+
+.subway-item em {
+    /*background-image: url('');*/
+    background-position: -27px -167px;
+    background-repeat: no-repeat;
+}
